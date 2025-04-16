@@ -1,0 +1,14 @@
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\obj\Debug\net8.0\TEXTRPG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\obj\Debug\net8.0\TEXTRPG.AssemblyInfoInputs.cache
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\obj\Debug\net8.0\TEXTRPG.AssemblyInfo.cs
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\obj\Debug\net8.0\TEXTRPG.csproj.CoreCompileInputs.cache
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\bin\Debug\net8.0\TEXTRPG.exe
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\bin\Debug\net8.0\TEXTRPG.deps.json
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\bin\Debug\net8.0\TEXTRPG.runtimeconfig.json
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\bin\Debug\net8.0\TEXTRPG.dll
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\bin\Debug\net8.0\TEXTRPG.pdb
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\obj\Debug\net8.0\TEXTRPG.dll
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\obj\Debug\net8.0\refint\TEXTRPG.dll
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\obj\Debug\net8.0\TEXTRPG.pdb
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\obj\Debug\net8.0\TEXTRPG.genruntimeconfig.cache
+C:\Users\JHD8657\source\repos\TEXTRPG\TEXTRPG\obj\Debug\net8.0\ref\TEXTRPG.dll

@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\JHD8657\\source\\repos\\TEXTRPG\\",
+  "WorkspaceRootPath": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|c:\\users\\jhd8657\\source\\repos\\textrpg\\textrpg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|c:\\users\\jhd8657\\documents\\github\\textrpg\\textrpg\\textrpg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|solutionrelative:textrpg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\JHD8657\\source\\repos\\TEXTRPG\\TEXTRPG\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Program.cs",
               "RelativeDocumentMoniker": "TEXTRPG\\Program.cs",
-              "ToolTip": "C:\\Users\\JHD8657\\source\\repos\\TEXTRPG\\TEXTRPG\\Program.cs",
-              "RelativeToolTip": "TEXTRPG\\Program.cs",
-              "ViewState": "AgIAAH4BAAAAAAAAAAAAAJsBAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Program.cs*",
+              "RelativeToolTip": "TEXTRPG\\Program.cs*",
+              "ViewState": "AgIAAP4AAAAAAAAAAAAMwBABAABuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T08:01:05.34Z",
               "EditorCaption": ""

@@ -1,0 +1,59 @@
+## C#/.NET + Visual Studio 기본 설정 ##
+
+# Visual Studio 사용자별 설정
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# 빌드 결과
+[Bb]in/
+[Oo]bj/
+*.exe
+*.dll
+*.pdb
+*.cache
+
+# 패키지 폴더
+packages/
+[Nn]u[Gg]et/
+*.nupkg
+
+# 로그 및 임시 파일
+[Tt]emp/
+*.log
+*.tlog
+
+# 테스트 결과
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Unity 관련 (Unity 프로젝트인 경우)
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/[Aa]ssets/[Aa]ddressable[Aa]ssets[Dd]ata/*/*.bin*
+/[Aa]ssets/[Ss]treamingAssets/aa.meta
+/[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# Rider IDE (사용 시)
+.idea/
+
+# MacOS (사용 시)
+.DS_Store
+
+# VS Code (사용 시)
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# 기타
+*.swp
+*.swo
+*~
+Thumbs.db

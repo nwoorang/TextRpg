@@ -15,30 +15,32 @@ internal class Program
     {
 
         GameManager manager = new GameManager();
-        Player user = new Player(01, "noname", "전사", 10, 5, 100, 1500); //테스트용 초기화 하기
+        Player user = new Player(01, "noname", "전사", 10, 5, 100); //테스트용 초기화 하기
         Inventory inventory = new Inventory();
         PlayerManager playerManager = new PlayerManager(user); //종합스탯창
         Shop shop = new Shop(); //상점
         manager.addInfo(user, inventory, playerManager, shop); //게임매니저에 유저와 유저의 인벤토리 전달
 
 
+
         #region 아이템 생성후 관리과정
 
-        /* 생성예시
+        /* 
+        생성예시
         Item ironArmor = new Item("무쇠갑옷", "무쇠로 만들어져 튼튼한 갑옷입니다.", 700)
         {
             Stats =
             {
             [StatType.Def] = 5
             }
-        }; //무쇠갑옷 아이템 생성
-
-        inventory.AddItem(ironArmor); //인벤토리에 무쇠갑옷 추가
+        };
+        인벤토리에 아이템 추가
+        inventory.AddItem(ironArmor); 
+        아이템에 스탯추가
         ironArmor.Stats[StatType.Hp] = 10; //스탯추가
-                                           //몬스터를 잡아서 아이템을 얻은상태 가정
         */
 
-       
+
         #endregion
 
         #region 상점 아이템 생성
@@ -50,7 +52,7 @@ internal class Program
             }
         };
         shop.AddItem(noviceArmor);
-        inventory.AddItem(noviceArmor);
+       
 
         Item ironArmor = new Item("무쇠갑옷", "무쇠로 만들어져 튼튼한 갑옷입니다.", 700)
         {
@@ -60,7 +62,7 @@ internal class Program
             }
         };
         shop.AddItem(ironArmor);
-        inventory.AddItem(ironArmor);
+       
         Item spartaArmor = new Item("스파르타의 갑옷", "스파르타의 전사들이 사용했다는 전설의 갑옷입니다.",3500)
         {
             Stats =
@@ -69,7 +71,7 @@ internal class Program
             }
         };
         shop.AddItem(spartaArmor);
-        inventory.AddItem(spartaArmor);
+        
         Item oldSword = new Item("낡은 검", "쉽게 볼 수 있는 낡은 검입니다.", 600)
         {
             Stats =
@@ -187,7 +189,7 @@ internal class Program
                     bool check4 = true;
                     while (check4)
                     {
-                        manager.ShopWindow();
+                        manager.ShopWindow();//상점창 오픈
                         int select4 = 0;
                         select4 = int.Parse(Console.ReadLine());
                         switch (select4)
@@ -197,31 +199,82 @@ internal class Program
                                 int select4_1 = 0;
                                 while (check4_1)
                                 {
-                                    manager.ShopPurchaseWindow();//장착관리창 오픈
+                                    manager.ShopBuyWindow();//상점구매창 오픈
                                     select4_1 = int.Parse(Console.ReadLine());
                                     switch (select4_1)
                                     {
                                         case 1:
-                                            shop.BuyItem(inventory, select4_1);
+                                            shop.BuyItem(inventory, select4_1, playerManager.gold, out int g);
+                                            playerManager.gold = g; //구매후 골드 업데이트
 
                                             break;
                                         case 2:
-                                            shop.BuyItem(inventory, select4_1);
+                                            shop.BuyItem(inventory, select4_1, playerManager.gold, out int g2);
+                                            playerManager.gold = g2; //구매후 골드 업데이트
+
                                             break;
                                         case 3:
-                                            shop.BuyItem(inventory, select4_1);
+                                            shop.BuyItem(inventory, select4_1, playerManager.gold, out int g3);
+                                            playerManager.gold = g3; //구매후 골드 업데이트
                                             break;
                                         case 4:
-                                            shop.BuyItem(inventory, select4_1);
+                                            shop.BuyItem(inventory, select4_1, playerManager.gold, out int g4);
+                                            playerManager.gold = g4; //구매후 골드 업데이트
                                             break;
                                         case 5:
-                                            shop.BuyItem(inventory, select4_1);
+                                            shop.BuyItem(inventory, select4_1, playerManager.gold, out int g5);
+                                            playerManager.gold = g5; //구매후 골드 업데이트
                                             break;
                                         case 6:
-                                            shop.BuyItem(inventory, select4_1);
+                                            shop.BuyItem(inventory, select4_1, playerManager.gold, out int g6);
+                                            playerManager.gold = g6; //구매후 골드 업데이트
                                             break;
                                         case 0:
                                             check4_1 = false;
+                                            break;
+                                        default://예외처리
+                                            Console.WriteLine("잘못된 입력입니다");
+                                            break;
+                                    }
+                                }
+                                break;
+                            case 2:
+                                bool check4_2 = true;
+                                int select4_2 = 0;
+                                while (check4_2)
+                                {
+                                    manager.ShopBuyWindow();//상점구매창 오픈
+                                    select4_2= int.Parse(Console.ReadLine());
+                                    switch (select4_2)
+                                    {
+                                        case 1:
+                                            shop.SellItem(inventory, select4_2, playerManager.gold, out int g);
+                                            playerManager.gold = g; //구매후 골드 업데이트
+
+                                            break;
+                                        case 2:
+                                            shop.SellItem(inventory, select4_2, playerManager.gold, out int g2);
+                                            playerManager.gold = g2; //구매후 골드 업데이트
+
+                                            break;
+                                        case 3:
+                                            shop.SellItem(inventory, select4_2, playerManager.gold, out int g3);
+                                            playerManager.gold = g3; //구매후 골드 업데이트
+                                            break;
+                                        case 4:
+                                            shop.SellItem(inventory, select4_2, playerManager.gold, out int g4);
+                                            playerManager.gold = g4; //구매후 골드 업데이트
+                                            break;
+                                        case 5:
+                                            shop.SellItem(inventory, select4_2, playerManager.gold, out int g5);
+                                            playerManager.gold = g5; //구매후 골드 업데이트
+                                            break;
+                                        case 6:
+                                            shop.SellItem(inventory, select4_2, playerManager.gold, out int g6);
+                                            playerManager.gold = g6; //구매후 골드 업데이트
+                                            break;
+                                        case 0:
+                                            check4_2 = false;
                                             break;
                                         default://예외처리
                                             Console.WriteLine("잘못된 입력입니다");
@@ -285,10 +338,10 @@ internal class Program
             Console.WriteLine("");
             Console.WriteLine($"Lv. {playerManager.Lv}");
             Console.WriteLine($"{playerManager.Name} ({playerManager.Class})");
-            Console.WriteLine($"공격력 :  {playerManager.Atk} ");
-            Console.WriteLine($"방어력 :  {playerManager.Def}");
+            Console.WriteLine($"공격력 :  {playerManager.Atk}(+{playerManager.GetEquipmentStat(StatType.Atk)}) ");
+            Console.WriteLine($"방어력 :  {playerManager.Def}(+{playerManager.GetEquipmentStat(StatType.Def)})");
             Console.WriteLine($"체력 : {playerManager.Hp}");
-            Console.WriteLine($"Gold : {playerManager.Gold} G");
+            Console.WriteLine($"Gold : {playerManager.gold} G");
             Console.WriteLine("");
             Console.WriteLine("0.나가기");
             Console.WriteLine("");
@@ -339,31 +392,53 @@ internal class Program
             Console.WriteLine("필요한 아이템을 얻을 수 있는 상점입니다.");
             Console.WriteLine("");
             Console.WriteLine("[보유 골드]");
-            Console.WriteLine($"{player.Gold} G");
+            Console.WriteLine($"{playerManager.gold} G");
             Console.WriteLine("");
             Console.WriteLine("[아이템 목록]");
             shop.ShowAllItem();
             Console.WriteLine("");
             Console.WriteLine("1.아이템 구매");
+            Console.WriteLine("2.아이템 판매");
             Console.WriteLine("0.나가기");
             Console.WriteLine("");
             Console.WriteLine("원하시는 행동을 입력하세요.");
             Console.Write(">>");
         }
-        public void ShopPurchaseWindow()
+        public void ShopBuyWindow()
         {
             Console.WriteLine("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
             Console.WriteLine("상점-아이템 구매");
             Console.WriteLine("필요한 아이템을 얻을 수 있는 상점입니다.");
             Console.WriteLine("");
             Console.WriteLine("[보유 골드]");
-            Console.WriteLine($"{player.Gold} G");
+            Console.WriteLine($"{playerManager.gold} G");
             Console.WriteLine("");
             Console.WriteLine("[아이템 목록]");
             for (int i = 0; i < shop.GetLength(); i++)
             {
                 shop.ShowItem(i);
                 shop.ShowBuyableItems(inventory,i);
+            }
+            Console.WriteLine("");
+            Console.WriteLine("0.나가기");
+            Console.WriteLine("");
+            Console.WriteLine("원하시는 행동을 입력하세요.");
+            Console.Write(">>");
+        }
+
+        public void ShopSellWindow()
+        {
+            Console.WriteLine("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
+            Console.WriteLine("상점-아이템 판매");
+            Console.WriteLine("필요없는 아이템을 팔 수 있는 상점입니다.");
+            Console.WriteLine("");
+            Console.WriteLine("[보유 골드]");
+            Console.WriteLine($"{playerManager.gold} G");
+            Console.WriteLine("");
+            Console.WriteLine("[아이템 목록]");
+            for (int i = 0; i < inventory.GetLength(); i++)
+            {
+                inventory.ShowItem(i);
             }
             Console.WriteLine("");
             Console.WriteLine("0.나가기");
@@ -384,7 +459,7 @@ internal class Program
         public float BaseAtk { get; private set; }
         public float BaseDef { get; private set; }
         public float BaseHp { get; private set; }
-        public float Gold { get; private set; }
+
 
         // 기본 생성자 (초기값 설정)
         public Player()
@@ -395,11 +470,10 @@ internal class Program
             BaseAtk = 10;
             BaseDef = 5;
             BaseHp = 100;
-            Gold = 50;
         }
 
         // 매개변수 생성자 (커스텀 설정)
-        public Player(float lv, string name, string job, float atk, float def, float hp, float gold)
+        public Player(float lv, string name, string job, float atk, float def, float hp)
         {
             Lv = lv;
             Name = name;
@@ -407,7 +481,6 @@ internal class Program
             BaseAtk = atk;
             BaseDef = def;
             BaseHp = hp;
-            Gold = gold;
         }
     }
     #endregion
@@ -423,7 +496,7 @@ internal class Program
         public float Atk => _player.BaseAtk + GetEquipmentStat(StatType.Atk); // 기본 + 장비 스탯
         public float Def => _player.BaseDef + GetEquipmentStat(StatType.Def); //변수를 부를때마다 장비능력치 합산을 해줌
         public float Hp => _player.BaseHp + GetEquipmentStat(StatType.Hp); //실시간 업데이트
-        public float Gold => _player.Gold;
+        public int gold { get; set; }= 1500;
 
         // 장착된 아이템 리스트
         private List<Item> _equippedItems = new List<Item>();
@@ -434,7 +507,7 @@ internal class Program
         }
 
         // 장비 스탯 합산 메서드
-        private float GetEquipmentStat(StatType type)
+        public float GetEquipmentStat(StatType type)
         {
             float total = 0f;
 
@@ -449,6 +522,7 @@ internal class Program
 
             return total;
         }
+
 
         // 장비 장착
         public void EquipItem(Item item) //장비 장착,해제
@@ -565,15 +639,22 @@ internal class Program
     public class Shop : ItemContainer
     {
         private Dictionary<Item,bool> checkItem { get; set; } = new();
-        public override void AddItem(Item additem)
+        public override void AddItem(Item additem)//아이템 추가
         {
             item.Add(additem);
         }
-        public override void RemoveItem(Item removeItem)
+        public override void RemoveItem(Item removeItem)//아이템 제거
         {
             item.Remove(removeItem);
         }
-
+        public override int GetLength() //아이템 개수
+        {
+            return item.Count;
+        }
+        public override List<Item> SetItem() //아이템리스트주기
+        {
+            return item;
+        }
         public void ShowAllItem() //아이템 모두 보여주기
         {
             foreach (Item item in item)
@@ -603,8 +684,7 @@ internal class Program
             Console.Write($" | ");
             Console.WriteLine($"{item[num2].Description}");
         }
-
-        public void ShowBuyableItems(ItemContainer container,int i)//사는게 가능한지 체크
+        public void ShowBuyableItems(ItemContainer container,int i)//장비 유무 확인후 구매했는지 안했는지 체크
         {
             Item foundItem = null;
             if (i< container.GetLength())
@@ -616,25 +696,14 @@ internal class Program
             }
             else
             {
-                checkItem.TryAdd(item[i],true);
+                checkItem.TryAdd(item[i],true); //add를 쓰면 중첩이 되므로 tryadd 사용
                 Console.WriteLine("구매완료");
             }
         }
-
-
-        public override int GetLength() //아이템 개수
+        public void BuyItem(ItemContainer container, int i,int currentgold,out int remindgold)//구매
         {
-            return item.Count;
-        }
-
-        public override List<Item> SetItem() //아이템리스트주기
-        {
-            return item;
-        }
-
-        public void BuyItem(ItemContainer container, int i)//구매
-        {
-            int j = i-1;
+            remindgold = currentgold; //구매전 골드
+            int j = i-1; //스위치에서는 1부터 시작하므로 -1
 
             if (j < container.GetLength())
             {
@@ -644,21 +713,34 @@ internal class Program
                     return;
                 }
             }
+
+            if (item[j].Gold > remindgold)
+            {
+                Console.WriteLine("골드가 부족합니다.");
+                return;
+            }
+            remindgold = (int)Math.Max(0, currentgold - item[j].Gold);
+
             Item itemToMove = this.item[j];
                 container.AddItem(itemToMove);  // 인벤토리에 추가
                 Console.WriteLine($"{itemToMove.Name} 구매완료");
 
         }
 
-        public void SellItem(ItemContainer container, int i)//판매
+        public void SellItem(ItemContainer container, int i, int currentgold, out int remindgold)//판매
         {
-            if (i < container.GetLength())
-            {
-                Item itemToMove = this.item[i];
-                container.RemoveItem(itemToMove);  // 인벤토리에 추가
-                AddItem(itemToMove);    // 상점에서 제거
-            }
+            remindgold = currentgold; //구매전 골드
+            int j = i - 1; //스위치에서는 1부터 시작하므로 -1
+
+            remindgold = (int)Math.Max(0, currentgold + item[j].Gold);
+
+            Item itemToMove = this.item[j];
+            container.RemoveItem(itemToMove);  // 인벤토리에 추가
+            Console.WriteLine($"{itemToMove.Name} 판매완료");
         }
+
+
+
     }
     #endregion
     #region 아이템

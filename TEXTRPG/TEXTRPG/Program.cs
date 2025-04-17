@@ -13,7 +13,7 @@ internal class Program
 
     private static void Main(string[] args)
     {
-        GameManager manager2 = new GameManager();
+
         GameManager manager = new GameManager();
         Player user = new Player(01, "noname", "전사", 10, 5, 100, 1500); //테스트용 초기화 하기
         Inventory inventory = new Inventory();

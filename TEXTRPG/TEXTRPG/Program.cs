@@ -107,6 +107,7 @@ internal class Program
         int select1 = 0;
         while (check1)
         {
+
             manager.ShowMainWindow(); //메인창 오픈
             select1 = int.Parse(Console.ReadLine());
             switch (select1)
@@ -125,6 +126,7 @@ internal class Program
                                 check2 = false;
                                 break;
                             default://예외처리
+                                Console.Clear();
                                 Console.WriteLine("잘못된 입력입니다");
                                 break;
                         }
@@ -134,6 +136,7 @@ internal class Program
                     bool check3 = true;
                     while (check3)
                     {
+                        
                         manager.ShowInventoryWindow();//인벤토리창 오픈
                         int select3 = 0;
                         select3 = int.Parse(Console.ReadLine());
@@ -170,7 +173,9 @@ internal class Program
                                             break;
                                         default://예외처리
                                             Console.WriteLine("잘못된 입력입니다");
+                                            Thread.Sleep(1000);
                                             break;
+                                          
                                     }
                                 }
                                 break;
@@ -180,6 +185,7 @@ internal class Program
                                 break;
                             default://예외처리
                                 Console.WriteLine("잘못된 입력입니다");
+                                Thread.Sleep(1000);
                                 break;
                         }
                     }
@@ -234,6 +240,7 @@ internal class Program
                                             break;
                                         default://예외처리
                                             Console.WriteLine("잘못된 입력입니다");
+                                            Thread.Sleep(1000);
                                             break;
                                     }
                                 }
@@ -278,6 +285,7 @@ internal class Program
                                             break;
                                         default://예외처리
                                             Console.WriteLine("잘못된 입력입니다");
+                                            Thread.Sleep(1000);
                                             break;
                                     }
                                 }
@@ -288,6 +296,7 @@ internal class Program
                                 break;
                             default://예외처리
                                 Console.WriteLine("잘못된 입력입니다");
+                                Thread.Sleep(1000);
                                 break;
                         }
                     }
@@ -295,6 +304,7 @@ internal class Program
                     break;
                 default://예외처리
                     Console.WriteLine("잘못된 입력입니다");
+                    Thread.Sleep(1000);
                     break;
             }
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Buffers.Text;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
@@ -506,7 +507,7 @@ internal class Program
         public float Atk => _player.BaseAtk + GetEquipmentStat(StatType.Atk); // 기본 + 장비 스탯
         public float Def => _player.BaseDef + GetEquipmentStat(StatType.Def); //변수를 부를때마다 장비능력치 합산을 해줌
         public float Hp => _player.BaseHp + GetEquipmentStat(StatType.Hp); //실시간 업데이트
-        public int gold { get; set; }= 1500;
+        public int gold { get; set; }= 1111500;
 
         // 장착된 아이템 리스트
         private List<Item> _equippedItems = new List<Item>();
@@ -694,13 +695,21 @@ internal class Program
             Console.Write($" | ");
             Console.WriteLine($"{item[num2].Description}");
         }
+
         public void ShowBuyableItems(ItemContainer container,int i)//장비 유무 확인후 구매했는지 안했는지 체크
         {
-            Item foundItem = null;
-            if (i< container.GetLength())
-               foundItem = item.Find(item => item.Name == container.SetItem()[i].Name);
-            //인벤토리의 아이템 리스트
-            if (foundItem == null)
+            //가게의 아이템 수만큼 ShowBuyableItems을 실행한다.
+            //첫번째 상점의 아이템과 인벤토리의 각 아이템들을 비교해서 찾아낸다.
+            bool found = false;
+            for (int j = 0; j < container.GetLength(); j++)
+            {
+                if (item[i].Name == container.SetItem()[j].Name)
+                {
+                    found = true;
+                    break; //찾았으면 더이상 찾지않음
+                }
+            }
+            if (!found)
             {
                 Console.WriteLine($"{item[i].Gold} G");
             }
@@ -714,10 +723,11 @@ internal class Program
         {
             remindgold = currentgold; //구매전 골드
             int j = i-1; //스위치에서는 1부터 시작하므로 -1
-
-            if (j < container.GetLength())
+            //여기가 문제
+            if (j < item.Count)
             {
-                if (checkItem.TryGetValue(container.SetItem()[j],out bool key))
+                checkItem.TryGetValue(item[j], out bool key);
+                if (key)
                 {
                     Console.WriteLine("이미 구매한 아이템입니다.");
                     return;
@@ -742,10 +752,20 @@ internal class Program
             remindgold = currentgold; //구매전 골드
             int j = i - 1; //스위치에서는 1부터 시작하므로 -1
 
-            remindgold = (int)Math.Max(0, currentgold + item[j].Gold);
+            if (j < container.GetLength())
+            {
+                checkItem.TryGetValue(container.SetItem()[j], out bool key);
+                if (key)
+                {
+                    Console.WriteLine("이미 구매한 아이템입니다.");
+                    return;
+                }
+            }
+
+            remindgold = (int)Math.Max(0, currentgold + item[j].Gold*0.85);
 
             Item itemToMove = this.item[j];
-            container.RemoveItem(itemToMove);  // 인벤토리에 추가
+            container.RemoveItem(itemToMove);  // 인벤토리에서 제거
             Console.WriteLine($"{itemToMove.Name} 판매완료");
         }
 

@@ -5,9 +5,12 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Xml.Linq;
 using static Program;
 public enum StatType { Atk, Def, Hp} //스탯 타입
+
+public enum EquipType { Armor,Sword } //스탯 타입
 internal class Program
 {
 
@@ -22,38 +25,40 @@ internal class Program
         Shop shop = new Shop(); //상점
         manager.addInfo(user, inventory, playerManager, shop); //게임매니저에 유저와 유저의 인벤토리 전달
 
+ 
 
+    #region 아이템 생성후 관리과정
 
-        #region 아이템 생성후 관리과정
-
-        /* 
-        생성예시
-        Item ironArmor = new Item("무쇠갑옷", "무쇠로 만들어져 튼튼한 갑옷입니다.", 700)
+    /* 
+    생성예시
+    Item ironArmor = new Item("무쇠갑옷", "무쇠로 만들어져 튼튼한 갑옷입니다.", 700)
+    {
+        Stats =
         {
+        [StatType.Def] = 5
+        }
+    };
+    인벤토리에 아이템 추가
+    inventory.AddItem(ironArmor); 
+    아이템에 스탯추가
+    ironArmor.Stats[StatType.Hp] = 10; //스탯추가
+    */
+
+
+    #endregion
+
+    #region 상점 아이템 생성
+    Item noviceArmor = new Item("수련자 갑옷", "수련에 도움을 주는 갑옷입니다.",1000)
+        {
+   
             Stats =
             {
             [StatType.Def] = 5
             }
-        };
-        인벤토리에 아이템 추가
-        inventory.AddItem(ironArmor); 
-        아이템에 스탯추가
-        ironArmor.Stats[StatType.Hp] = 10; //스탯추가
-        */
 
 
-        #endregion
-
-        #region 상점 아이템 생성
-        Item noviceArmor = new Item("수련자 갑옷", "수련에 도움을 주는 갑옷입니다.",112000)
-        {
-            Stats =
-            {
-            [StatType.Def] = 5
-            }
         };
         shop.AddItem(noviceArmor);
-       
 
         Item ironArmor = new Item("무쇠갑옷", "무쇠로 만들어져 튼튼한 갑옷입니다.", 700)
         {
@@ -88,6 +93,7 @@ internal class Program
             {
             [StatType.Atk] = 5
             }
+           
         };
         shop.AddItem(bronzeAx);
 
@@ -97,9 +103,21 @@ internal class Program
             {
             [StatType.Atk] = 7
             }
+            
         };
-
         shop.AddItem(spartaSpear);
+
+
+        Item rtan = new Item("르탄이의 가호", "이거 코딩해줘를 하면 알아서 코딩을 다해준다.", 77777)
+        {
+            Stats =
+            {
+            [StatType.Atk] = 77
+            }
+        };
+        rtan.Stats[StatType.Def] = 77;
+        rtan.Stats[StatType.Hp] = 77;
+        shop.AddItem(rtan);
         #endregion
 
 
@@ -169,6 +187,12 @@ internal class Program
                                         case 5:
                                             playerManager.EquipItem(inventory.FindArrayItem(select3_1));
                                             break;
+                                        case 6:
+                                            playerManager.EquipItem(inventory.FindArrayItem(select3_1));
+                                            break;
+                                        case 7:
+                                            playerManager.EquipItem(inventory.FindArrayItem(select3_1));
+                                            break;
                                         case 0:
                                             check3_1 = false;
                                             break;
@@ -236,6 +260,10 @@ internal class Program
                                             shop.BuyItem(inventory, select4_1, playerManager.gold, out int g6);
                                             playerManager.gold = g6; //구매후 골드 업데이트
                                             break;
+                                        case 7:
+                                            shop.BuyItem(inventory, select4_1, playerManager.gold, out int g7);
+                                            playerManager.gold = g7; //구매후 골드 업데이트
+                                            break;
                                         case 0:
                                             check4_1 = false;
                                             break;
@@ -280,6 +308,10 @@ internal class Program
                                         case 6:
                                             shop.SellItem(inventory, select4_2, playerManager.gold, out int g6);
                                             playerManager.gold = g6; //구매후 골드 업데이트
+                                            break;
+                                        case 7:
+                                            shop.SellItem(inventory, select4_2, playerManager.gold, out int g7);
+                                            playerManager.gold = g7; //구매후 골드 업데이트
                                             break;
                                         case 0:
                                             check4_2 = false;
@@ -715,7 +747,6 @@ internal class Program
             }
             else
             {
-                checkItem.TryAdd(item[i],true); //add를 쓰면 중첩이 되므로 tryadd 사용
                 Console.WriteLine("구매완료");
             }
         }
@@ -743,7 +774,8 @@ internal class Program
 
             Item itemToMove = this.item[j];
                 container.AddItem(itemToMove);  // 인벤토리에 추가
-                Console.WriteLine($"{itemToMove.Name} 구매완료");
+            checkItem.TryAdd(item[j], true); //add를 쓰면 중첩이 되므로 tryadd 사용
+            Console.WriteLine($"{itemToMove.Name} 구매완료");
 
         }
 
@@ -752,12 +784,12 @@ internal class Program
             remindgold = currentgold; //구매전 골드
             int j = i - 1; //스위치에서는 1부터 시작하므로 -1
 
-            if (j < container.GetLength())
+            if (j < item.Count)
             {
-                checkItem.TryGetValue(container.SetItem()[j], out bool key);
-                if (key)
+                checkItem.TryGetValue(item[j], out bool key);
+                if (!key)
                 {
-                    Console.WriteLine("이미 구매한 아이템입니다.");
+                    Console.WriteLine("소유중이지 않으므로 판매 불가능입니다.");
                     return;
                 }
             }
@@ -766,6 +798,7 @@ internal class Program
 
             Item itemToMove = this.item[j];
             container.RemoveItem(itemToMove);  // 인벤토리에서 제거
+            checkItem.Remove(item[j]); //제거
             Console.WriteLine($"{itemToMove.Name} 판매완료");
         }
 
@@ -782,15 +815,17 @@ internal class Program
         public float Gold { get; private set; }
         public string Description { get; private set; }
 
-        public bool IsEquipped { get; private set; } = false;
+        public bool IsEquipped { get; set; } = false;
 
+        public EquipType Equip_Type { get;private set; } //장비타입  //나중에 아이템을 상속받은 장비로 바꿀거임
         public Item() { } //기본 생성자
-        public Item(string name, string des, float gold = 0) { Name = name; Description = des; Gold = gold; }
+        public Item(string name, string des, float gold = 0) 
+        { Name = name; Description = des; Gold = gold; }
 
         public void SetIsEquipped(bool isEquipped)
         {
             IsEquipped = isEquipped;
-            
+        
         }
 
         public void SetStats(StatType type, int value)

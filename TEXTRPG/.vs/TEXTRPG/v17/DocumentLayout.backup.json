@@ -5,6 +5,34 @@
     {
       "AbsoluteMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|c:\\users\\jhd8657\\documents\\github\\textrpg\\textrpg\\textrpg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|solutionrelative:textrpg\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|c:\\users\\jhd8657\\documents\\github\\textrpg\\textrpg\\textrpg\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|solutionrelative:textrpg\\gamemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|c:\\users\\jhd8657\\documents\\github\\textrpg\\textrpg\\textrpg\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|solutionrelative:textrpg\\playermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|c:\\users\\jhd8657\\documents\\github\\textrpg\\textrpg\\textrpg\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|solutionrelative:textrpg\\shop.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|c:\\users\\jhd8657\\documents\\github\\textrpg\\textrpg\\textrpg\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|solutionrelative:textrpg\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|c:\\users\\jhd8657\\documents\\github\\textrpg\\textrpg\\textrpg\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|solutionrelative:textrpg\\item.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|c:\\users\\jhd8657\\documents\\github\\textrpg\\textrpg\\textrpg\\itemcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|solutionrelative:textrpg\\itemcontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|c:\\users\\jhd8657\\documents\\github\\textrpg\\textrpg\\textrpg\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1A643268-C7EB-4BA1-A76A-97D8F757A47A}|TEXTRPG\\TEXTRPG.csproj|solutionrelative:textrpg\\inventory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,11 +50,102 @@
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Program.cs",
               "RelativeDocumentMoniker": "TEXTRPG\\Program.cs",
-              "ToolTip": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Program.cs",
-              "RelativeToolTip": "TEXTRPG\\Program.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAQwBAAAAAAAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Program.cs*",
+              "RelativeToolTip": "TEXTRPG\\Program.cs*",
+              "ViewState": "AgIAAMYAAAAAAAAAAAAIwM0AAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-15T08:01:05.34Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GameManager.cs",
+              "DocumentMoniker": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\GameManager.cs",
+              "RelativeDocumentMoniker": "TEXTRPG\\GameManager.cs",
+              "ToolTip": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\GameManager.cs",
+              "RelativeToolTip": "TEXTRPG\\GameManager.cs",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAYwIMAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T03:07:53.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PlayerManager.cs",
+              "DocumentMoniker": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\PlayerManager.cs",
+              "RelativeDocumentMoniker": "TEXTRPG\\PlayerManager.cs",
+              "ToolTip": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\PlayerManager.cs",
+              "RelativeToolTip": "TEXTRPG\\PlayerManager.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAqwEUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T03:06:50.121Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ItemContainer.cs",
+              "DocumentMoniker": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\ItemContainer.cs",
+              "RelativeDocumentMoniker": "TEXTRPG\\ItemContainer.cs",
+              "ToolTip": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\ItemContainer.cs",
+              "RelativeToolTip": "TEXTRPG\\ItemContainer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAADwvwcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T03:04:56.367Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Shop.cs",
+              "DocumentMoniker": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Shop.cs",
+              "RelativeDocumentMoniker": "TEXTRPG\\Shop.cs",
+              "ToolTip": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Shop.cs",
+              "RelativeToolTip": "TEXTRPG\\Shop.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAD4v4YAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T03:06:20.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Inventory.cs",
+              "DocumentMoniker": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Inventory.cs",
+              "RelativeDocumentMoniker": "TEXTRPG\\Inventory.cs",
+              "ToolTip": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Inventory.cs",
+              "RelativeToolTip": "TEXTRPG\\Inventory.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T03:05:34.638Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Player.cs",
+              "DocumentMoniker": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Player.cs",
+              "RelativeDocumentMoniker": "TEXTRPG\\Player.cs",
+              "ToolTip": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Player.cs",
+              "RelativeToolTip": "TEXTRPG\\Player.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACgAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T03:07:22.213Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Item.cs",
+              "DocumentMoniker": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Item.cs",
+              "RelativeDocumentMoniker": "TEXTRPG\\Item.cs",
+              "ToolTip": "C:\\Users\\JHD8657\\Documents\\GitHub\\TextRpg\\TEXTRPG\\TEXTRPG\\Item.cs",
+              "RelativeToolTip": "TEXTRPG\\Item.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T03:01:48.674Z",
               "EditorCaption": ""
             }
           ]
